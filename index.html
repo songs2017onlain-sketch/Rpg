@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini MMORPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Выбери персонажа</h1>
+    <div id="character-selection">
+        <button onclick="chooseCharacter('Человек', 'Воин')">Человек - Воин</button>
+        <button onclick="chooseCharacter('Эльф', 'Маг')">Эльф - Маг</button>
+        <button onclick="chooseCharacter('Орк', 'Лучник')">Орк - Лучник</button>
+    </div>
+    <div id="game" style="display:none;">
+        <h2 id="player-info"></h2>
+        <button onclick="move('Город')">Перейти в Город</button>
+        <button onclick="move('Лес')">Перейти в Лес</button>
+        <div id="chat">
+            <h3>Глобальный чат</h3>
+            <div id="messages"></div>
+            <input type="text" id="msg-input" placeholder="Напиши сообщение">
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
